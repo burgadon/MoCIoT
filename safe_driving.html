@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sensor Usage:Safe Driving</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8"/>
+		
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="vendor/waves/waves.min.css" />
+		<link rel="stylesheet" href="vendor/wow/animate.css" />
+		<link rel="stylesheet" href="css/nativedroid2.css" />
+		<link rel="stylesheet" href="vendor/chartist/style.css" />
+		<link rel="stylesheet" href="css/custom.css" />
+		
+		<style>
+				/* Prevent Flash of unstyled content */
+				body { opacity: 0; }
+		</style>
+
+	</head>
+	<body>
+
+	<!-- Center page for content. -->
+	<div data-role="page">
+		<div  id="bodySD">
+			<!-- Include side panel using nativedroid2. Panel content is located in "panel.left.html" -->
+			<nd2-include data-src="panel.left.html"></nd2-include>
+
+			<!-- Header with open/close button for side panel. -->
+			<div data-role="header" data-position="fixed" class="wow fadeIn" id="safeDriveHeader">
+				<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.4s'><i class="zmdi zmdi-menu"></i></a>
+				<h1 class="wow fadeIn" data-wow-delay='0.2s'>Save Driving</h1>
+			</div>
+			<br>
+			
+			<!-- Content -->
+			<h3 align="center" id="introduction">Safe driving mode will color the site white once movement is detected.</h3>
+		</div>
+		
+		<button onclick="getMovement()"><i class="zmdi zmdi-smartphone-lock"></i> Enable safe driving mode</button>
+		<button onclick="location.href='safe_driving.html'"><i class="zmdi zmdi-smartphone"></i> Disable safe driving mode</button>
+		<div id="bodySD2"><br><br><br><br><br><br></div>
+		
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="jqm/jquery.mobile-1.4.5.min.js"></script>
+	<script src="vendor/waves/waves.min.js"></script>
+	<script src="vendor/wow/wow.min.js"></script>
+	<script src="vendor/chartist/chartist.min.js"></script>
+	<script src="js/nativedroid2.js"></script>
+	<script src="nd2settings.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>	
+	
+	</body>
+</html>

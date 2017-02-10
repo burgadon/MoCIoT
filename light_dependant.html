@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sensor Usage:Light-Dependant Font-Size</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8"/>
+		
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="vendor/waves/waves.min.css" />
+		<link rel="stylesheet" href="vendor/wow/animate.css" />
+		<link rel="stylesheet" href="css/nativedroid2.css" />
+		<link rel="stylesheet" href="vendor/chartist/style.css" />
+		<link rel="stylesheet" href="css/custom.css" />
+		
+		<style>
+				/* Prevent Flash of unstyled content */
+				body { opacity: 0; }
+		</style>
+
+	</head>
+	<body onload="getLux()">
+
+	<!-- Center page for content. -->
+	<div data-role="page">
+
+		<!-- Include side panel using nativedroid2. Panel content is located in "panel.left.html" -->
+		<nd2-include data-src="panel.left.html"></nd2-include>
+
+		<!-- Header with open/close button for side panel. -->
+		<div data-role="header" data-position="fixed" class="wow fadeIn">
+			<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.4s'><i class="zmdi zmdi-menu"></i></a>
+			<h1 class="wow fadeIn" data-wow-delay='0.2s'>Font-Style</h1>
+		</div>
+		
+		<!-- Content -->
+		<div id="lightDepContent" align="center">
+			<div id="ambientLightSensorData" align="center">Current lighting is: NULL lux.</div>
+			<div id="ambientLightAPISupport" align="center"></div>
+			<br><br>
+			<div id="text" align="center">
+				<h4>Beispieltext</h4>
+				Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad 
+				minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in 
+				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui 
+				officia deserunt mollit anim id est laborum.
+			</div>
+			<br><br><br><br><br><br>
+		</div>
+
+		
+		
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="jqm/jquery.mobile-1.4.5.min.js"></script>
+	<script src="vendor/waves/waves.min.js"></script>
+	<script src="vendor/wow/wow.min.js"></script>
+	<script src="vendor/chartist/chartist.min.js"></script>
+	<script src="js/nativedroid2.js"></script>
+	<script src="nd2settings.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>	
+	
+	</body>
+</html>

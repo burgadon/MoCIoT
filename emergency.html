@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sensor Usage:Emergency Situation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8"/>
+		
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="vendor/waves/waves.min.css" />
+		<link rel="stylesheet" href="vendor/wow/animate.css" />
+		<link rel="stylesheet" href="css/nativedroid2.css" />
+		<link rel="stylesheet" href="vendor/chartist/style.css" />
+		<link rel="stylesheet" href="css/custom.css" />
+		
+		<style>
+				/* Prevent Flash of unstyled content */
+				body { opacity: 0; }
+		</style>
+		
+	</head>
+	<body>
+	
+	<!-- Center page for content. -->
+	<div data-role="page">
+
+		<!-- Include side panel using nativedroid2. Panel content is located in "panel.left.html" -->
+		<nd2-include data-src="panel.left.html"></nd2-include>
+
+		<!-- Header with open/close button for side panel. -->
+		<div data-role="header" data-position="fixed" class="wow fadeIn">
+			<a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.4s'><i class="zmdi zmdi-menu"></i></a>
+			<h1 class="wow fadeIn" data-wow-delay='0.2s'>Emergency Situation</h1>
+		</div>
+		
+		<!-- Content -->
+		<!-- Position -->
+		<br>
+		<button onclick="getLocation();"><i class="zmdi zmdi-navigation"></i> Get current position:</button>
+		<p id="coordinates" align="center">Latitude: <br>Longitude: </p>
+		<br>
+		
+		<!-- Image-Box -->
+		<button><i class="zmdi zmdi-camera"></i> Capture an Image: <input id="myFileInput" type="file" accept="image/*;capture=camera" onchange="imgPreview(this)"></button>
+		<p align="center"><img id="capturedImg"/></p>
+
+		<!-- Gyroscope-Box -->
+		<button onclick="gyroscope();"><i class="zmdi zmdi-gps-dot"></i> Device-Orientation:</button>
+		<p align="center" id="gyro">Alpha (Kompasswinkel in Grad): <br>Beta (Vorwärts-Rückwärts Neigung): <br>Gamma (Rechts-Links Neigung): </p>
+		
+		<!-- Text-Box -->
+		<button><i class="zmdi zmdi-comment-text"></i> Add additional information:</button>
+		<p align="center" id="addinfo"><textarea id="addinfoText" rows="3" cols="30" placeholder="Additional information"></textarea></p>
+		<br><br><br><br>
+		
+		<!-- Send -->
+		<button onclick="sendEmail();"><i class="zmdi zmdi-mail-send"></i> Send Email</button>
+
+		
+		
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="jqm/jquery.mobile-1.4.5.min.js"></script>
+	<script src="vendor/waves/waves.min.js"></script>
+	<script src="vendor/wow/wow.min.js"></script>
+	<script src="vendor/chartist/chartist.min.js"></script>
+	<script src="js/nativedroid2.js"></script>
+	<script src="nd2settings.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	
+	</body>
+</html>
